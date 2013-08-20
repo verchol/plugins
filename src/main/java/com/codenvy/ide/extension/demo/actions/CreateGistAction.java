@@ -1,5 +1,6 @@
 package com.codenvy.ide.extension.demo.actions;
 
+import com.codenvy.ide.api.parts.ConsolePart;
 import com.codenvy.ide.api.ui.action.Action;
 import com.codenvy.ide.api.ui.action.ActionEvent;
 import com.codenvy.ide.extension.demo.GistExtensionLocalizationConstant;
@@ -15,6 +16,7 @@ import com.google.inject.Singleton;
 public class CreateGistAction extends Action {
 
     private CreateGistPresenter createGistPresenter;
+    private ConsolePart    console;
 
     @Inject
     public CreateGistAction(GistExtensionResources resources,
@@ -22,12 +24,14 @@ public class CreateGistAction extends Action {
                             GistExtensionLocalizationConstant localizationConstants) {
         super(localizationConstants.createGistActionText(), localizationConstants.createGistActionDescription(), resources.github());
         this.createGistPresenter = createGistPresenter;
+        this.console = console;
     }
 
     /** {@inheritDoc} */
     @Override
     public void actionPerformed(ActionEvent e) {
-        createGistPresenter.showDialog();
+        // createGistPresenter.showDialog();
+        console.print("I'm actually runnning");
     }
 
     /** {@inheritDoc} */
