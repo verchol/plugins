@@ -21,7 +21,8 @@ public class CreateGistAction extends Action {
     @Inject
     public CreateGistAction(GistExtensionResources resources,
                             CreateGistPresenter createGistPresenter,
-                            GistExtensionLocalizationConstant localizationConstants) {
+                            GistExtensionLocalizationConstant localizationConstants,
+                            ConsolePart console) {
         super(localizationConstants.createGistActionText(), localizationConstants.createGistActionDescription(), resources.github());
         this.createGistPresenter = createGistPresenter;
         this.console = console;
@@ -31,7 +32,8 @@ public class CreateGistAction extends Action {
     @Override
     public void actionPerformed(ActionEvent e) {
         // createGistPresenter.showDialog();
-        console.print("I'm actually runnning");
+        com.google.gwt.user.client.Window.alert("Hello");
+        console.print("I'm actually running");
     }
 
     /** {@inheritDoc} */
