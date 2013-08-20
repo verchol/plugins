@@ -1,4 +1,4 @@
 plugins
 =======
 
-Plugins for IDE3
+Demo plugin for testing
