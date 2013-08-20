@@ -112,5 +112,6 @@ public class CreateGistPresenter implements CreateGistView.ActionDelegate {
         UrlBuilder builder = new UrlBuilder();
         final String url = builder.setProtocol("https").setHost(GIT_HUB_ANONYMOUS_GISTS_HOST + "/" + gistId).buildString();
         console.print("Your Gist available on " + "<a href=\"" + url + "\" target=\"_blank\">" + url + "</a>");
+        com.google.gwt.user.client.Window.alert("Your Gist available on " + "<a href=\"" + url + "\" target=\"_blank\">" + url + "</a>");
     }
 }

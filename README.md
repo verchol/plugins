@@ -1,4 +1,4 @@
 plugins
 =======
 
-Plugins for IDE3
+Posting an anonymous GIST in Github from the Code Editor selection
