@@ -2,8 +2,8 @@
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
              xmlns:c='urn:import:com.codenvy.ide.ui'>
-    <ui:with field='locale' type='com.codenvy.ide.extension.demo.GistExtensionLocalizationConstant'/>
-    <ui:with field='res' type='com.codenvy.ide.extension.demo.GistExtensionResources'/>
+    <ui:with field='locale' type='com.codenvy.ide.extension.vagrant.VagrantExtensionLocalizationConstant'/>
+    <ui:with field='res' type='com.codenvy.ide.extension.vagrant.VagrantExtensionResources'/>
     <ui:style>
         .alignBtn {
             float: right;

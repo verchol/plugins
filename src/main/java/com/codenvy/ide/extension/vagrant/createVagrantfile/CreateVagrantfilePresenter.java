@@ -1,7 +1,7 @@
-package com.codenvy.ide.extension.demo.createGist;
+package com.codenvy.ide.extension.vagrant.createVagrantfile;
 
 import com.codenvy.ide.api.parts.ConsolePart;
-import com.codenvy.ide.extension.demo.GistExtensionLocalizationConstant;
+import com.codenvy.ide.extension.vagrant.VagrantExtensionLocalizationConstant;
 import com.google.gwt.http.client.Request;
 import com.google.gwt.http.client.RequestBuilder;
 import com.google.gwt.http.client.RequestCallback;
@@ -20,11 +20,11 @@ import com.google.inject.Singleton;
  * Presenter for creating Gist on GitHub from code snippet.
  */
 @Singleton
-public class CreateGistPresenter implements CreateGistView.ActionDelegate {
+public class CreateVagrantfilePresenter implements CreateVagrantfileView.ActionDelegate {
     private static final String               GIT_HUB_GISTS_API            = "https://api.github.com/gists";
     private static final String               GIT_HUB_ANONYMOUS_GISTS_HOST = "gist.github.com/anonymous";
-    private CreateGistView                    view;
-    private GistExtensionLocalizationConstant constant;
+    private CreateVagrantfileView                    view;
+    private VagrantExtensionLocalizationConstant constant;
     private ConsolePart                       console;
 
     /**
@@ -35,8 +35,8 @@ public class CreateGistPresenter implements CreateGistView.ActionDelegate {
      * @param constant
      */
     @Inject
-    public CreateGistPresenter(CreateGistView view, ConsolePart console,
-                               GistExtensionLocalizationConstant constant) {
+    public CreateVagrantfilePresenter(CreateVagrantfileView view, ConsolePart console,
+                               VagrantExtensionLocalizationConstant constant) {
         this.view = view;
         this.view.setDelegate(this);
         this.console = console;

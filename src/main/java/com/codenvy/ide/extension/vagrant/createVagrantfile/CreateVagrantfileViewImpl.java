@@ -1,8 +1,8 @@
-package com.codenvy.ide.extension.demo.createGist;
+package com.codenvy.ide.extension.vagrant.createVagrantfile;
 
 import com.codenvy.ide.annotations.NotNull;
-import com.codenvy.ide.extension.demo.GistExtensionLocalizationConstant;
-import com.codenvy.ide.extension.demo.GistExtensionResources;
+import com.codenvy.ide.extension.vagrant.VagrantExtensionLocalizationConstant;
+import com.codenvy.ide.extension.vagrant.VagrantExtensionResources;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.KeyUpEvent;
@@ -17,11 +17,11 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 
 /**
- * The implementation of {@link CreateGistView}.
+ * The implementation of {@link CreateVagrantfileView}.
  */
 @Singleton
-public class CreateGistViewImpl extends DialogBox implements CreateGistView {
-    interface CommitViewImplUiBinder extends UiBinder<Widget, CreateGistViewImpl> {
+public class CreateVagrantfileViewImpl extends DialogBox implements CreateVagrantfileView {
+    interface CommitViewImplUiBinder extends UiBinder<Widget, CreateVagrantfileViewImpl> {
     }
 
     private static CommitViewImplUiBinder   ourUiBinder = GWT.create(CommitViewImplUiBinder.class);
@@ -35,9 +35,9 @@ public class CreateGistViewImpl extends DialogBox implements CreateGistView {
     @UiField
     com.codenvy.ide.ui.Button               btnCancel;
     @UiField(provided = true)
-    final GistExtensionResources            res;
+    final VagrantExtensionResources            res;
     @UiField(provided = true)
-    final GistExtensionLocalizationConstant locale;
+    final VagrantExtensionLocalizationConstant locale;
     private ActionDelegate                  delegate;
 
     /**
@@ -47,7 +47,7 @@ public class CreateGistViewImpl extends DialogBox implements CreateGistView {
      * @param locale
      */
     @Inject
-    protected CreateGistViewImpl(GistExtensionResources resources, GistExtensionLocalizationConstant locale) {
+    protected CreateVagrantfileViewImpl(VagrantExtensionResources resources, VagrantExtensionLocalizationConstant locale) {
         this.res = resources;
         this.locale = locale;
 

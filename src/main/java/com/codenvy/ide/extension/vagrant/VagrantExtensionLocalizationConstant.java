@@ -1,11 +1,11 @@
-package com.codenvy.ide.extension.demo;
+package com.codenvy.ide.extension.vagrant;
 
 import com.google.gwt.i18n.client.Messages;
 
 /**
- * Interface to represent the constants contained in resource bundle: 'GistExtensionLocalizationConstant.properties'.
+ * Interface to represent the constants contained in resource bundle: 'VagrantExtensionLocalizationConstant.properties'.
  */
-public interface GistExtensionLocalizationConstant extends Messages {
+public interface VagrantExtensionLocalizationConstant extends Messages {
     /* Buttons */
     @Key("button.cancel")
     String buttonCancel();
@@ -36,7 +36,7 @@ public interface GistExtensionLocalizationConstant extends Messages {
     @Key("messages.detectGistIdError")
     String detectGistIdError();
 
-    /* CreateGistView */
+    /* CreateVagrantfileView */
     @Key("createGist.title")
     String createViewTitle();
 

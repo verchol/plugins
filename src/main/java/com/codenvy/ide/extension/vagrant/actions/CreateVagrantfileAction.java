@@ -1,11 +1,11 @@
-package com.codenvy.ide.extension.demo.actions;
+package com.codenvy.ide.extension.vagrant.actions;
 
 import com.codenvy.ide.api.parts.ConsolePart;
 import com.codenvy.ide.api.ui.action.Action;
 import com.codenvy.ide.api.ui.action.ActionEvent;
-import com.codenvy.ide.extension.demo.GistExtensionLocalizationConstant;
-import com.codenvy.ide.extension.demo.GistExtensionResources;
-import com.codenvy.ide.extension.demo.createGist.CreateGistPresenter;
+import com.codenvy.ide.extension.vagrant.VagrantExtensionLocalizationConstant;
+import com.codenvy.ide.extension.vagrant.VagrantExtensionResources;
+import com.codenvy.ide.extension.vagrant.createVagrantfile.CreateVagrantfilePresenter;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 
@@ -13,25 +13,25 @@ import com.google.inject.Singleton;
  * Action for creating Gist on GitHub.
  */
 @Singleton
-public class CreateGistAction extends Action {
+public class CreateVagrantfileAction extends Action {
 
-    private CreateGistPresenter createGistPresenter;
+    private CreateVagrantfilePresenter createVagrantfilePresenter;
     private ConsolePart    console;
 
     @Inject
-    public CreateGistAction(GistExtensionResources resources,
-                            CreateGistPresenter createGistPresenter,
-                            GistExtensionLocalizationConstant localizationConstants,
+    public CreateVagrantfileAction(VagrantExtensionResources resources,
+                            CreateVagrantfilePresenter createVagrantfilePresenter,
+                            VagrantExtensionLocalizationConstant localizationConstants,
                             ConsolePart console) {
         super(localizationConstants.createGistActionText(), localizationConstants.createGistActionDescription(), resources.github());
-        this.createGistPresenter = createGistPresenter;
+        this.createVagrantfilePresenter = createVagrantfilePresenter;
         this.console = console;
     }
 
     /** {@inheritDoc} */
     @Override
     public void actionPerformed(ActionEvent e) {
-        // createGistPresenter.showDialog();
+        // createVagrantfilePresenter.showDialog();
         com.google.gwt.user.client.Window.alert("Hello");
         console.print("I'm actually running");
     }

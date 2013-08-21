@@ -1,13 +1,13 @@
-package com.codenvy.ide.extension.demo.createGist;
+package com.codenvy.ide.extension.vagrant.createVagrantfile;
 
 import com.codenvy.ide.annotations.NotNull;
 import com.codenvy.ide.api.mvp.View;
 
 /**
- * The view of {@link CreateGistPresenter}.
+ * The view of {@link CreateVagrantfilePresenter}.
  */
-public interface CreateGistView extends View<CreateGistView.ActionDelegate> {
-    /** Needs for delegate some function into {@link CreateGistView} view. */
+public interface CreateVagrantfileView extends View<CreateVagrantfileView.ActionDelegate> {
+    /** Needs for delegate some function into {@link CreateVagrantfileView} view. */
     public interface ActionDelegate {
         /** Performs any actions appropriate in response to the user having pressed the Create button. */
         void onCreateClicked();
