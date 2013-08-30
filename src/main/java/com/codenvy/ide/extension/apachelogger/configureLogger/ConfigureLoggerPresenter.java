@@ -63,7 +63,7 @@ public class ConfigureLoggerPresenter implements ConfigureLoggerView.ActionDeleg
 
     /** {@inheritDoc} */
     @Override
-    public void ValueChanged() {
+    public void onValueChanged() {
         this.console.print("value changed...");
     }
 }
