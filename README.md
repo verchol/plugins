@@ -1,4 +1,4 @@
-plugins
-=======
+Codenvy Extension Scaffolding sample
+====================================
 
-Posting an anonymous GIST in Github from the Code Editor selection
+Sample Extension with the bare minimum files to start development

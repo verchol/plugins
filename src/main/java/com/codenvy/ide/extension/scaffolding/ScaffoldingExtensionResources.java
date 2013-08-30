@@ -1,4 +1,4 @@
-package com.codenvy.ide.extension.vagrant;
+package com.codenvy.ide.extension.scaffolding;
 
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
@@ -7,7 +7,7 @@ import com.google.gwt.resources.client.ImageResource;
 /**
  * Client resources.
  */
-public interface VagrantExtensionResources extends ClientBundle {
+public interface ScaffoldingExtensionResources extends ClientBundle {
     public interface GistCSS extends CssResource {
         String textFont();
     }
@@ -15,6 +15,6 @@ public interface VagrantExtensionResources extends ClientBundle {
     @Source({"Gist.css", "com/codenvy/ide/api/ui/style.css"})
     GistCSS gistCSS();
 
-    @Source("com/codenvy/ide/extension/demo/images/github.png")
-    ImageResource github();
+    @Source("com/codenvy/ide/extension/demo/images/codenvy.png")
+    ImageResource icon();
 }
