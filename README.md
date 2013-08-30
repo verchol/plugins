@@ -1,4 +1,4 @@
-Codenvy Extension Scaffolding sample
-====================================
+Codenvy Extension template
+==========================
 
-Sample Extension with the bare minimum files to start development
+Extension scaffolding template with the bare minimum files to start development.
