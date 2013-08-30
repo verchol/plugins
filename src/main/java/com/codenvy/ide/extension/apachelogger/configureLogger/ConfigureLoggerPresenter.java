@@ -60,4 +60,10 @@ public class ConfigureLoggerPresenter implements ConfigureLoggerView.ActionDeleg
     public void onCancelClicked() {
         view.close();
     }
+
+    /** {@inheritDoc} */
+    @Override
+    public void ValueChanged() {
+        this.console.print("value changed...");
+    }
 }

@@ -35,9 +35,9 @@ public class ConfigureLoggerViewImpl extends DialogBox implements ConfigureLogge
     @UiField
     com.codenvy.ide.ui.Button               btnCancel;
     @UiField(provided = true)
-    final GistExtensionResources            res;
+    final ApacheLoggerExtensionResources            res;
     @UiField(provided = true)
-    final GistExtensionLocalizationConstant locale;
+    final ApacheLoggerExtensionLocalizationConstant locale;
     private ActionDelegate                  delegate;
 
     /**
@@ -53,7 +53,7 @@ public class ConfigureLoggerViewImpl extends DialogBox implements ConfigureLogge
 
         Widget widget = ourUiBinder.createAndBindUi(this);
 
-        this.setText(locale.createViewTitle());
+        this.setText("My Title");
         this.setWidget(widget);
     }
 
