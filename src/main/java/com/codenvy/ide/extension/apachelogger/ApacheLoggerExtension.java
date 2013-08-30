@@ -3,6 +3,7 @@ package com.codenvy.ide.extension.apachelogger;
 import com.codenvy.ide.api.extension.Extension;
 import com.codenvy.ide.api.ui.action.ActionManager;
 import com.codenvy.ide.api.ui.action.DefaultActionGroup;
+import com.codenvy.ide.api.ui.action.IdeActions;
 import com.codenvy.ide.extension.apachelogger.ApacheLoggerExtensionLocalizationConstant;
 import com.codenvy.ide.extension.apachelogger.actions.ConfigureLoggerAction;
 
