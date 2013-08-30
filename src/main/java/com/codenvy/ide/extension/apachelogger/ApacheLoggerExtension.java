@@ -3,7 +3,8 @@ package com.codenvy.ide.extension.apachelogger;
 import com.codenvy.ide.api.extension.Extension;
 import com.codenvy.ide.api.ui.action.ActionManager;
 import com.codenvy.ide.api.ui.action.DefaultActionGroup;
-import com.codenvy.ide.extension.demo.actions.ConfigureLoggerAction;
+import com.codenvy.ide.extension.apachelogger.ApacheLoggerExtensionLocalizationConstant;
+import com.codenvy.ide.extension.apachelogger.actions.ConfigureLoggerAction;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
@@ -20,7 +21,7 @@ public class ApacheLoggerExtension {
                          ApacheLoggerExtensionLocalizationConstant localizationConstants,
                          ConfigureLoggerAction configureLoggerAction) {
         // Register a new action
-        actionManager.registerAction(localizationConstants.configureLoggerActionId(), createLoggerAction);
+        actionManager.registerAction(localizationConstants.configureLoggerActionId(), configureLoggerAction);
         // Get a reference of the Project Menu
         DefaultActionGroup projectGroup = (DefaultActionGroup)actionManager.getAction(IdeActions.GROUP_PROJECT);
         
@@ -31,6 +32,6 @@ public class ApacheLoggerExtension {
         projectGroup.add(apacheLoggerActionGroup);
         
         // Add the Configure Logger action to the Apache Logger submenu
-        apacheLoggerActionGroup.add(createLoggerAction);
+        apacheLoggerActionGroup.add(configureLoggerAction);
     }
 }
