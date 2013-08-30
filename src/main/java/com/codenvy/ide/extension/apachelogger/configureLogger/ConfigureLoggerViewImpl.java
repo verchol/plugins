@@ -47,7 +47,7 @@ public class ConfigureLoggerViewImpl extends DialogBox implements ConfigureLogge
      * @param locale
      */
     @Inject
-    protected CreateGistViewImpl(GistExtensionResources resources, GistExtensionLocalizationConstant locale) {
+    protected ConfigureLoggerViewImpl(ApacheLoggerExtensionResources resources, ApacheLoggerExtensionLocalizationConstant locale) {
         this.res = resources;
         this.locale = locale;
 
