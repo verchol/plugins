@@ -2,9 +2,9 @@ package com.codenvy.ide.extension.apachelogger.actions;
 
 import com.codenvy.ide.api.ui.action.Action;
 import com.codenvy.ide.api.ui.action.ActionEvent;
-import com.codenvy.ide.extension.demo.ApacheLoggerExtensionLocalizationConstant;
-import com.codenvy.ide.extension.demo.ApacheLoggerExtensionResources;
-import com.codenvy.ide.extension.demo.configureLogger.ConfigureLoggerPresenter;
+import com.codenvy.ide.extension.apachelogger.ApacheLoggerExtensionLocalizationConstant;
+import com.codenvy.ide.extension.apachelogger.ApacheLoggerExtensionResources;
+import com.codenvy.ide.extension.apachelogger.configureLogger.ConfigureLoggerPresenter;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 
