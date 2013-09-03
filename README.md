@@ -6,7 +6,7 @@ Codenvy Extension Scaffolding
 - Entry Java package, including Gin module.
 - Directory structure for static assets.
 - Basic localization files.
-- Maven's pom.xml build file.
+- Maven's `pom.xml` build file.
 
 The extension just prints a message into the running IDE's console. 
 The message itself is taken from the localization files.
