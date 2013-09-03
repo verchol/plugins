@@ -1,8 +1,6 @@
-package com.codenvy.ide.extension.demo.inject;
+package com.codenvy.ide.extension.scaffolding.inject;
 
 import com.codenvy.ide.api.extension.ExtensionGinModule;
-import com.codenvy.ide.extension.demo.createGist.CreateGistView;
-import com.codenvy.ide.extension.demo.createGist.CreateGistViewImpl;
 import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.inject.Singleton;
 
@@ -11,6 +9,6 @@ public class ScaffoldingGinModule extends AbstractGinModule {
     /** {@inheritDoc} */
     @Override
     protected void configure() {
-        // Gin Module configuration here
+        // bind(CreateVagrantfileView.class).to(CreateVagrantfileViewImpl.class).in(Singleton.class);
     }
 }
