@@ -7,6 +7,6 @@ import com.google.gwt.i18n.client.Messages;
  */
 public interface ScaffoldingExtensionLocalizationConstant extends Messages {
     /* Messages */
-    @Key("messages.loaded")
+    @Key("messages.extensionRunning")
     String extensionRunning();
 }
