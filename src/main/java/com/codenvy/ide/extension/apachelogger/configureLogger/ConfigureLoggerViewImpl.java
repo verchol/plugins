@@ -21,10 +21,10 @@ import com.google.inject.Singleton;
  */
 @Singleton
 public class ConfigureLoggerViewImpl extends DialogBox implements ConfigureLoggerView {
-    interface CommitViewImplUiBinder extends UiBinder<Widget, ConfigureLoggerViewImpl> {
+    interface ConfigureLoggerViewImplUiBinder extends UiBinder<Widget, ConfigureLoggerViewImpl> {
     }
 
-    private static CommitViewImplUiBinder   ourUiBinder = GWT.create(CommitViewImplUiBinder.class);
+    private static ConfigureLoggerViewImplUiBinder   ourUiBinder = GWT.create(ConfigureLoggerViewImplUiBinder.class);
 
     @UiField
     CheckBox                                publicField;
