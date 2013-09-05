@@ -1,7 +1,5 @@
 package com.codenvy.ide.extension.apachelogger.actions;
 
-import java.io.File;
-
 import com.codenvy.ide.api.editor.EditorAgent;
 import com.codenvy.ide.api.resources.ResourceProvider;
 import com.codenvy.ide.api.ui.action.Action;
@@ -10,6 +8,7 @@ import com.codenvy.ide.extension.apachelogger.ApacheLoggerExtensionLocalizationC
 import com.codenvy.ide.extension.apachelogger.ApacheLoggerExtensionResources;
 import com.codenvy.ide.extension.apachelogger.configureLogger.ConfigureLoggerPresenter;
 import com.codenvy.ide.resources.model.Project;
+import com.codenvy.ide.resources.model.File 
 import com.codenvy.ide.rest.MimeType;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
