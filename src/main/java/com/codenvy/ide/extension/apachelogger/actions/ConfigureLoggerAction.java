@@ -29,7 +29,7 @@ public class ConfigureLoggerAction extends Action {
     private EditorAgent editorAgent;
     
     private static final String LOG4J_CONFIG_FILENAME = "log4j.properties";
-    private static final String CONFIG_FILE_CHARSET = "@CHARSET \"UTF-8\";";
+    private static final String CONFIG_FILE_CHARSET = "";
 
     @Inject
     public ConfigureLoggerAction(ConfigureLoggerPresenter configureLoggerPresenter,
@@ -53,7 +53,7 @@ public class ConfigureLoggerAction extends Action {
     	Project activeProject = resourceProvider.getActiveProject();
     	if (activeProject != null) {
     		// createFile(final Folder parent, String name, String content, String mimeType, final AsyncCallback<File> callback) {
-    		createApacheLoggerConfigFile(activeProject);
+    		openApacheLoggerConfigFile(activeProject);
             //configureLoggerPresenter.showDialog();
     	} else {
     		console.print("ERROR: No project open.");
@@ -61,7 +61,17 @@ public class ConfigureLoggerAction extends Action {
     	
     }
     
-    public void createApacheLoggerConfigFile(Project project) {
+    public void openApacheLoggerConfigFile(Project project) {
+    	// Find a file 
+    	File log4jconfig = (File) project.findResourceByName(LOG4J_CONFIG_FILENAME, File.TYPE);
+    	if (log4jconfig != null) {
+    		console.print("Found file. Will open it now...");
+    		editorAgent.openEditor(log4jconfig);
+    	} else {
+    		console.print("ERROR: Could not find log4j.properties file!");
+    	}
+    	
+    	/*
         project.createFile(project, LOG4J_CONFIG_FILENAME, CONFIG_FILE_CHARSET, MimeType.TEXT_PLAIN, new AsyncCallback<File>() {
             @Override
             public void onSuccess(File result) {
@@ -74,6 +84,7 @@ public class ConfigureLoggerAction extends Action {
             	console.print("ERROR: problem creating configuration file! Error was: " + caught.getLocalizedMessage());
             }
         });
+        */
     }
 
     /** {@inheritDoc} */
