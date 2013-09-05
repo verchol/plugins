@@ -50,7 +50,7 @@ public class ConfigureLoggerAction extends Action {
     	Project activeProject = resourceProvider.getActiveProject();
     	if (activeProject != null) {
     		// createFile(final Folder parent, String name, String content, String mimeType, final AsyncCallback<File> callback) {
-    		activeProject.createFile();
+    		createApacheLoggerConfigFile(activeProject);
             //configureLoggerPresenter.showDialog();
     	} else {
     		console.print("ERROR: No project open.");
