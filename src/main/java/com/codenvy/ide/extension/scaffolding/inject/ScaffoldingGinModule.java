@@ -9,6 +9,6 @@ public class ScaffoldingGinModule extends AbstractGinModule {
     /** {@inheritDoc} */
     @Override
     protected void configure() {
-        // bind(CreateVagrantfileView.class).to(CreateVagrantfileViewImpl.class).in(Singleton.class);
+
     }
 }
