@@ -76,7 +76,7 @@ public class ConfigureLoggerViewImpl extends DialogBox implements ConfigureLogge
         this.delegate = delegate;
     }
 
-    @UiHandler("btnCreate")
+    @UiHandler("btnApply")
     public void onCommitClicked(ClickEvent event) {
         delegate.onCreateClicked();
     }
@@ -85,8 +85,8 @@ public class ConfigureLoggerViewImpl extends DialogBox implements ConfigureLogge
     public void onCancelClicked(ClickEvent event) {
         delegate.onCancelClicked();
     }
-
-    @UiHandler("snippet")
+    
+    @UiHandler("myTextField")
     public void onMessageChanged(KeyUpEvent event) {
         delegate.onValueChanged();
     }

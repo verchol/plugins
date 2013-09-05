@@ -27,7 +27,7 @@
                 <c:Button addStyleNames="{style.alignBtn}" text="{locale.buttonCancel}" width="60px" size="SMALL" type="DANGER"
                           ui:field="btnCancel"/>
                 <c:Button addStyleNames="{style.alignBtn} {style.space}" text="{locale.buttonApply}" width="60px" size="SMALL"
-                          type="SUCCESS" ui:field="btnCreate"/>
+                          type="SUCCESS" ui:field="btnApply"/>
             </g:FlowPanel>
         </g:south>
         <g:center>
@@ -39,7 +39,7 @@
                     <g:Label text="Text" />
                 </g:north>
                 <g:center>
-                    <g:TextArea ui:field="snippet" width="338px" height="140px"/>
+                    <g:TextArea ui:field="myTextField" width="338px" height="140px"/>
                 </g:center>
             </g:DockLayoutPanel>
         </g:center>
