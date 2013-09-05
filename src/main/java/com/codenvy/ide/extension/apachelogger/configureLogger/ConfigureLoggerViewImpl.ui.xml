@@ -26,20 +26,20 @@
             <g:FlowPanel>
                 <c:Button addStyleNames="{style.alignBtn}" text="{locale.buttonCancel}" width="60px" size="SMALL" type="DANGER"
                           ui:field="btnCancel"/>
-                <c:Button addStyleNames="{style.alignBtn} {style.space}" text="{locale.buttonCreate}" width="60px" size="SMALL"
+                <c:Button addStyleNames="{style.alignBtn} {style.space}" text="{locale.buttonApply}" width="60px" size="SMALL"
                           type="SUCCESS" ui:field="btnCreate"/>
             </g:FlowPanel>
         </g:south>
         <g:center>
             <g:DockLayoutPanel unit="PX" width="100%" height="100%" styleName="{style.spacing}">
                 <g:north size="22.0">
-                    <g:CheckBox ui:field="publicField" HTML="{locale.publicFieldTitle}" addStyleNames="{res.gistCSS.textFont}"/>
+                    <g:CheckBox ui:field="publicField" HTML="Public"/>
                 </g:north>
                 <g:north size="20.0">
-                    <g:Label text="{locale.snippetFieldTitle}" addStyleNames="{res.gistCSS.textFont}"/>
+                    <g:Label text="Text" />
                 </g:north>
                 <g:center>
-                    <g:TextArea ui:field="snippet" width="338px" height="140px" addStyleNames="{res.gistCSS.textFont}"/>
+                    <g:TextArea ui:field="snippet" width="338px" height="140px""/>
                 </g:center>
             </g:DockLayoutPanel>
         </g:center>

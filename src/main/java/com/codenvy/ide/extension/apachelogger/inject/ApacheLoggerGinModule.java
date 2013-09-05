@@ -10,7 +10,7 @@ import com.google.inject.Singleton;
 public class ApacheLoggerGinModule extends AbstractGinModule {
       /** {@inheritDoc} */
       @Override
-            protected void configure() {
-                      bind(ConfigureLoggerView.class).to(ConfigureLoggerViewImpl.class).in(Singleton.class);
-                          }
+      protected void configure() {
+    	  bind(ConfigureLoggerView.class).to(ConfigureLoggerViewImpl.class).in(Singleton.class);
+      }
 }

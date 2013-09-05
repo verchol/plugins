@@ -6,10 +6,14 @@ import com.google.gwt.i18n.client.Messages;
  * Interface to represent the constants contained in resource bundle: 'ApacheLoggerExtensionLocalizationConstant.properties'.
  */
 public interface ApacheLoggerExtensionLocalizationConstant extends Messages {
-    /* Messages */
-    @Key("messages.loaded")
-    String extensionRunning();
+    /* Buttons */
+    @Key("button.cancel")
+    String buttonCancel();
 
+    /* Buttons */
+    @Key("button.apply")
+    String buttonApply();
+    
     /* Actions */
     @Key("control.configureLogger.id")
     String configureLoggerActionId();
