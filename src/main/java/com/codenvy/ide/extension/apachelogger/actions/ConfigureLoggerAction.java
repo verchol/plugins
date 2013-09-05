@@ -1,5 +1,6 @@
 package com.codenvy.ide.extension.apachelogger.actions;
 
+import com.codenvy.ide.api.editor.EditorAgent;
 import com.codenvy.ide.api.resources.ResourceProvider;
 import com.codenvy.ide.api.ui.action.Action;
 import com.codenvy.ide.api.ui.action.ActionEvent;
