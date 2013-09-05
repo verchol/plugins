@@ -7,6 +7,7 @@ import com.codenvy.ide.extension.apachelogger.ApacheLoggerExtensionLocalizationC
 import com.codenvy.ide.extension.apachelogger.ApacheLoggerExtensionResources;
 import com.codenvy.ide.extension.apachelogger.configureLogger.ConfigureLoggerPresenter;
 import com.codenvy.ide.resources.model.Project;
+import com.codenvy.ide.rest.MimeType;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 
@@ -22,16 +23,22 @@ public class ConfigureLoggerAction extends Action {
     private ConfigureLoggerPresenter configureLoggerPresenter;
     private ResourceProvider resourceProvider;
     private ConsolePart console;
+    private EditorAgent editorAgent;
+    
+    private static final String LOG4J_CONFIG_FILENAME = "log4j.properties";
+    private static final String CONFIG_FILE_CHARSET = "@CHARSET \"UTF-8\";";
 
     @Inject
     public ConfigureLoggerAction(ConfigureLoggerPresenter configureLoggerPresenter,
     						ApacheLoggerExtensionResources resources,
                             ApacheLoggerExtensionLocalizationConstant localizationConstants,
                             ResourceProvider resourceProvider,
+                            EditorAgent editorAgent,
                             ConsolePart console) {
         super(localizationConstants.configureLoggerActionText(), localizationConstants.configureLoggerActionDescription(), resources.icon());
         this.configureLoggerPresenter = configureLoggerPresenter;
         this.resourceProvider = resourceProvider;
+        this.editorAgent = editorAgent;
         this.console = console;
         
         Project activeProject = resourceProvider.getActiveProject();
@@ -42,11 +49,28 @@ public class ConfigureLoggerAction extends Action {
     public void actionPerformed(ActionEvent e) {
     	Project activeProject = resourceProvider.getActiveProject();
     	if (activeProject != null) {
-            configureLoggerPresenter.showDialog();
+    		// createFile(final Folder parent, String name, String content, String mimeType, final AsyncCallback<File> callback) {
+    		activeProject.createFile();
+            //configureLoggerPresenter.showDialog();
     	} else {
-    		console.print("No project open.");
+    		console.print("ERROR: No project open.");
     	}
     	
+    }
+    
+    public void createApacheLoggerConfigFile(Project project) {
+        project.createFile(project, LOG4J_CONFIG_FILENAME, CONFIG_FILE_CHARSET, MimeType.TEXT_PLAIN, new AsyncCallback<File>() {
+            @Override
+            public void onSuccess(File result) {
+            	console.print("File created successfuly.");
+            	editorAgent.openEditor(result);
+            }
+
+            @Override
+            public void onFailure(Throwable caught) {
+            	console.print("ERROR: problem creating configuration file! Error was: " + caught.getLocalizedMessage());
+            }
+        });
     }
 
     /** {@inheritDoc} */
