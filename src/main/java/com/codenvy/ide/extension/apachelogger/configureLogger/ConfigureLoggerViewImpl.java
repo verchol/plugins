@@ -29,7 +29,7 @@ public class ConfigureLoggerViewImpl extends DialogBox implements ConfigureLogge
     @UiField
     CheckBox                                publicField;
     @UiField
-    TextArea                                snippet;
+    TextArea                                myTextField;
     @UiField
     com.codenvy.ide.ui.Button               btnApply;
     @UiField
