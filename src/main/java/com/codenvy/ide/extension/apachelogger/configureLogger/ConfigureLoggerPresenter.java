@@ -50,7 +50,7 @@ public class ConfigureLoggerPresenter implements ConfigureLoggerView.ActionDeleg
 
     /** {@inheritDoc} */
     @Override
-    public void onCreateClicked() {
+    public void onApplyClicked() {
         Window.alert("Hello World!");
         view.close();
     }

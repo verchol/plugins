@@ -9,8 +9,8 @@ import com.codenvy.ide.api.mvp.View;
 public interface ConfigureLoggerView extends View<ConfigureLoggerView.ActionDelegate> {
     /** Needs for delegate some function into {@link ConfigureLoggerView} view. */
     public interface ActionDelegate {
-        /** Performs any actions appropriate in response to the user having pressed the Create button. */
-        void onCreateClicked();
+        /** Performs any actions appropriate in response to the user having pressed the Apply button. */
+        void onApplyClicked();
 
         /** Performs any actions appropriate in response to the user having pressed the Cancel button. */
         void onCancelClicked();

@@ -31,7 +31,7 @@ public class ConfigureLoggerViewImpl extends DialogBox implements ConfigureLogge
     @UiField
     TextArea                                snippet;
     @UiField
-    com.codenvy.ide.ui.Button               btnCreate;
+    com.codenvy.ide.ui.Button               btnApply;
     @UiField
     com.codenvy.ide.ui.Button               btnCancel;
     @UiField(provided = true)
@@ -78,7 +78,7 @@ public class ConfigureLoggerViewImpl extends DialogBox implements ConfigureLogge
 
     @UiHandler("btnApply")
     public void onCommitClicked(ClickEvent event) {
-        delegate.onCreateClicked();
+        delegate.onApplyClicked();
     }
 
     @UiHandler("btnCancel")
