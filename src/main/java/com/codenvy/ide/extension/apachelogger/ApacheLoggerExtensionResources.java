@@ -9,6 +9,6 @@ import com.google.gwt.resources.client.ImageResource;
  */
 public interface ApacheLoggerExtensionResources extends ClientBundle {
 
-    @Source("com/codenvy/ide/extension/apachelogger/images/codenvy.png")
+    @Source("com/codenvy/ide/extension/apachelogger/images/config.png")
     ImageResource icon();
 }

@@ -52,9 +52,7 @@ public class ConfigureLoggerAction extends Action {
     public void actionPerformed(ActionEvent e) {
     	Project activeProject = resourceProvider.getActiveProject();
     	if (activeProject != null) {
-    		// createFile(final Folder parent, String name, String content, String mimeType, final AsyncCallback<File> callback) {
     		openApacheLoggerConfigFile(activeProject);
-            //configureLoggerPresenter.showDialog();
     	} else {
     		console.print("ERROR: No project open.");
     	}
@@ -68,23 +66,21 @@ public class ConfigureLoggerAction extends Action {
     		console.print("Found file. Will open it now...");
     		editorAgent.openEditor(log4jconfig);
     	} else {
-    		console.print("ERROR: Could not find log4j.properties file!");
-    	}
-    	
-    	/*
-        project.createFile(project, LOG4J_CONFIG_FILENAME, CONFIG_FILE_CHARSET, MimeType.TEXT_PLAIN, new AsyncCallback<File>() {
-            @Override
-            public void onSuccess(File result) {
-            	console.print("File created successfuly.");
-            	editorAgent.openEditor(result);
-            }
+    		console.print("WARN: Could not find log4j.properties file. Will attemp to create it");
+    		
+            project.createFile(project, LOG4J_CONFIG_FILENAME, CONFIG_FILE_CHARSET, MimeType.TEXT_PLAIN, new AsyncCallback<File>() {
+                @Override
+                public void onSuccess(File result) {
+                	console.print("File created successfuly.");
+                	editorAgent.openEditor(result);
+                }
 
-            @Override
-            public void onFailure(Throwable caught) {
-            	console.print("ERROR: problem creating configuration file! Error was: " + caught.getLocalizedMessage());
-            }
-        });
-        */
+                @Override
+                public void onFailure(Throwable caught) {
+                	console.print("ERROR: problem creating configuration file! Error was: " + caught.getLocalizedMessage());
+                }
+            });
+    	}
     }
 
     /** {@inheritDoc} */
