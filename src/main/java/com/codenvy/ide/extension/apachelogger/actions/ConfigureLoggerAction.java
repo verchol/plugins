@@ -21,6 +21,7 @@ public class ConfigureLoggerAction extends Action {
 
     private ConfigureLoggerPresenter configureLoggerPresenter;
     private ResourceProvider resourceProvider;
+    private ConsolePart console;
 
     @Inject
     public ConfigureLoggerAction(ConfigureLoggerPresenter configureLoggerPresenter,
@@ -31,6 +32,7 @@ public class ConfigureLoggerAction extends Action {
         super(localizationConstants.configureLoggerActionText(), localizationConstants.configureLoggerActionDescription(), resources.icon());
         this.configureLoggerPresenter = configureLoggerPresenter;
         this.resourceProvider = resourceProvider;
+        this.console = console;
         
         Project activeProject = resourceProvider.getActiveProject();
     }
