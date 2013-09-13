@@ -6,6 +6,7 @@ import com.codenvy.ide.api.parts.ConsolePart;
 import com.codenvy.ide.api.editor.EditorAgent;
 import com.codenvy.ide.api.editor.EditorPartPresenter;
 import com.codenvy.ide.api.preferences.PreferencesManager;
+import com.codenvy.ide.api.resources.ResourceProvider;
 import com.codenvy.ide.extension.demo.GistExtensionLocalizationConstant;
 import com.codenvy.ide.extension.demo.GistExtensionResources;
 import com.codenvy.ide.extension.demo.createGist.CreateGistPresenter;
@@ -13,6 +14,8 @@ import com.codenvy.ide.extension.demo.GistExtensionLocalizationConstant;
 import com.codenvy.ide.resources.model.File;
 import com.codenvy.ide.resources.model.Property;
 import com.codenvy.ide.resources.model.Project;
+import com.codenvy.ide.resources.model.ProjectNature;
+import com.codenvy.ide.json.JsonStringSet;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
@@ -43,6 +46,7 @@ public class CreateGistAction extends Action {
     
     private CreateGistPresenter createGistPresenter;
     private EditorAgent editorAgent;
+    private ResourceProvider resourceProvider;
     private PreferencesManager prefs;
     private GistExtensionLocalizationConstant constant;
     private ConsolePart console;
@@ -51,11 +55,13 @@ public class CreateGistAction extends Action {
     public CreateGistAction(GistExtensionResources resources,
                             CreateGistPresenter createGistPresenter,
                             EditorAgent editorAgent,
+                            ResourceProvider resourceProvider,
                             PreferencesManager prefs,
                             ConsolePart console,
                             GistExtensionLocalizationConstant localizationConstants) {
         super(localizationConstants.createGistActionText(), localizationConstants.createGistActionDescription(), resources.github());
         this.editorAgent = editorAgent;
+        this.resourceProvider = resourceProvider;
         this.prefs = prefs;
         this.createGistPresenter = createGistPresenter;
         this.constant = localizationConstants;
@@ -67,6 +73,23 @@ public class CreateGistAction extends Action {
     @Override
     public void actionPerformed(ActionEvent e) {
         EditorPartPresenter textEditor = editorAgent.getActiveEditor();
+
+        if (resourceProvider != null) {
+            // Get primary Nature
+            JsonStringSet natures = resourceProvider.getActiveProject().getDescription().getNatures();
+            for (String natureId : natures.getKeys().asIterable()) {
+                console.print("NatureID: " + natureId);
+                ProjectNature nat = resourceProvider.getNature(natureId);
+                if (nat != null) {
+                    console.print(nat.getLabel());
+                } else {
+                    console.print("Nature is null");
+                }
+            }
+        } else {
+            console.print("resource provider is null");
+        }
+
         if (textEditor != null) {
             console.print("Got text editor");
             console.print(textEditor.toString());
