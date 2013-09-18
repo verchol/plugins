@@ -2,8 +2,8 @@
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
              xmlns:c='urn:import:com.codenvy.ide.ui'>
-    <ui:with field='locale' type='com.codenvy.ide.extension.apachelogger.ApacheLoggerExtensionLocalizationConstant'/>
-    <ui:with field='res' type='com.codenvy.ide.extension.apachelogger.ApacheLoggerExtensionResources'/>
+    <ui:with field='locale' type='org.example.apachelogger.ApacheLoggerExtensionLocalizationConstant'/>
+    <ui:with field='res' type='org.example.apachelogger.ApacheLoggerExtensionResources'/>
     <ui:style>
         .alignBtn {
             float: right;

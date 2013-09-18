@@ -1,8 +1,8 @@
-package com.codenvy.ide.extension.apachelogger.inject;
+package org.example.apachelogger.inject;
 
 import com.codenvy.ide.api.extension.ExtensionGinModule;
-import com.codenvy.ide.extension.apachelogger.configureLogger.ConfigureLoggerView;
-import com.codenvy.ide.extension.apachelogger.configureLogger.ConfigureLoggerViewImpl;
+import org.example.apachelogger.configureLogger.ConfigureLoggerView;
+import org.example.apachelogger.configureLogger.ConfigureLoggerViewImpl;
 import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.inject.Singleton;
 

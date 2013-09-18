@@ -1,12 +1,12 @@
-package com.codenvy.ide.extension.apachelogger.actions;
+package org.example.apachelogger.actions;
 
 import com.codenvy.ide.api.editor.EditorAgent;
 import com.codenvy.ide.api.resources.ResourceProvider;
 import com.codenvy.ide.api.ui.action.Action;
 import com.codenvy.ide.api.ui.action.ActionEvent;
-import com.codenvy.ide.extension.apachelogger.ApacheLoggerExtensionLocalizationConstant;
-import com.codenvy.ide.extension.apachelogger.ApacheLoggerExtensionResources;
-import com.codenvy.ide.extension.apachelogger.configureLogger.ConfigureLoggerPresenter;
+import org.example.apachelogger.ApacheLoggerExtensionLocalizationConstant;
+import org.example.apachelogger.ApacheLoggerExtensionResources;
+import org.example.apachelogger.configureLogger.ConfigureLoggerPresenter;
 import com.codenvy.ide.resources.model.Project;
 import com.codenvy.ide.resources.model.File; 
 import com.codenvy.ide.rest.MimeType;

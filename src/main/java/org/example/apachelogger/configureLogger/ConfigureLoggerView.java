@@ -1,4 +1,4 @@
-package com.codenvy.ide.extension.apachelogger.configureLogger;
+package org.example.apachelogger.configureLogger;
 
 import com.codenvy.ide.annotations.NotNull;
 import com.codenvy.ide.api.mvp.View;

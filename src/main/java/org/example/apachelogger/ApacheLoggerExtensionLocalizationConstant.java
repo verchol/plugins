@@ -1,4 +1,4 @@
-package com.codenvy.ide.extension.apachelogger;
+package org.example.apachelogger;
 
 import com.google.gwt.i18n.client.Messages;
 

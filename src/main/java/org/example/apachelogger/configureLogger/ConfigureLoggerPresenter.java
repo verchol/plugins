@@ -1,7 +1,7 @@
-package com.codenvy.ide.extension.apachelogger.configureLogger;
+package org.example.apachelogger.configureLogger;
 
 import com.codenvy.ide.api.parts.ConsolePart;
-import com.codenvy.ide.extension.apachelogger.ApacheLoggerExtensionLocalizationConstant;
+import org.example.apachelogger.ApacheLoggerExtensionLocalizationConstant;
 import com.google.gwt.http.client.Request;
 import com.google.gwt.http.client.RequestBuilder;
 import com.google.gwt.http.client.RequestCallback;

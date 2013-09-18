@@ -1,8 +1,8 @@
-package com.codenvy.ide.extension.apachelogger.configureLogger;
+package org.example.apachelogger.configureLogger;
 
 import com.codenvy.ide.annotations.NotNull;
-import com.codenvy.ide.extension.apachelogger.ApacheLoggerExtensionLocalizationConstant;
-import com.codenvy.ide.extension.apachelogger.ApacheLoggerExtensionResources;
+import org.example.apachelogger.ApacheLoggerExtensionLocalizationConstant;
+import org.example.apachelogger.ApacheLoggerExtensionResources;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.KeyUpEvent;
