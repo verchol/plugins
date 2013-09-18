@@ -1,4 +1,4 @@
-plugins
-=======
+Codenvy Gist Plug-In
+====================
 
-Plugins for IDE3
+Codenvy SDK plugin to post a code snippet into Github's Gists (http://gist.github.com)
