@@ -15,6 +15,6 @@ public interface GistExtensionResources extends ClientBundle {
     @Source({"Gist.css", "com/codenvy/ide/api/ui/style.css"})
     GistCSS gistCSS();
 
-    @Source("org.example.demo/images/github.png")
+    @Source("org/example/demo/images/github.png")
     ImageResource github();
 }
