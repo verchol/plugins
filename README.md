@@ -1,5 +1,5 @@
-Codenvy Extension template
-==========================
+Codenvy Apache Logger Plug-in
+=============================
 
-Apache Logger extension test.
+Codenvy SDK extension example to create an Apache log4j's logger configuration file.
 
