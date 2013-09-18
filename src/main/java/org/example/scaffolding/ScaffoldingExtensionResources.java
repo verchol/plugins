@@ -1,4 +1,4 @@
-package com.codenvy.ide.extension.scaffolding;
+package org.example.scaffolding;
 
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
@@ -15,6 +15,6 @@ public interface ScaffoldingExtensionResources extends ClientBundle {
     @Source({"styles.css", "com/codenvy/ide/api/ui/styles.css"})
     ScaffoldingCSS styles();
 
-    @Source("com/codenvy/ide/extension/demo/images/codenvy.png")
+    @Source("org/example/images/codenvy.png")
     ImageResource icon();
 }

@@ -1,4 +1,4 @@
-package com.codenvy.ide.extension.scaffolding;
+package org.example.scaffolding;
 
 import com.codenvy.ide.api.extension.Extension;
 import com.codenvy.ide.api.parts.ConsolePart;
