@@ -1,4 +1,4 @@
-package org.example.demo.createGist;
+package com.codenvy.ide.extension.demo.createGist;
 
 import com.codenvy.ide.annotations.NotNull;
 import com.codenvy.ide.api.mvp.View;
