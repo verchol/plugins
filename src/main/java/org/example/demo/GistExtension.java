@@ -1,9 +1,9 @@
-package com.codenvy.ide.extension.demo;
+package org.example.demo;
 
 import com.codenvy.ide.api.extension.Extension;
 import com.codenvy.ide.api.ui.action.ActionManager;
 import com.codenvy.ide.api.ui.action.DefaultActionGroup;
-import com.codenvy.ide.extension.demo.actions.CreateGistAction;
+import org.example.demo.actions.CreateGistAction;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 

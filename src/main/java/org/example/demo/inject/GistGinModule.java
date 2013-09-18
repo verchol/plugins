@@ -1,8 +1,8 @@
-package com.codenvy.ide.extension.demo.inject;
+package org.example.demo.inject;
 
 import com.codenvy.ide.api.extension.ExtensionGinModule;
-import com.codenvy.ide.extension.demo.createGist.CreateGistView;
-import com.codenvy.ide.extension.demo.createGist.CreateGistViewImpl;
+import org.example.demo.createGist.CreateGistView;
+import org.example.demo.createGist.CreateGistViewImpl;
 import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.inject.Singleton;
 

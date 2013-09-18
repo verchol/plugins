@@ -1,8 +1,8 @@
-package com.codenvy.ide.extension.demo.createGist;
+package org.example.demo.createGist;
 
 import com.codenvy.ide.annotations.NotNull;
-import com.codenvy.ide.extension.demo.GistExtensionLocalizationConstant;
-import com.codenvy.ide.extension.demo.GistExtensionResources;
+import org.example.demo.GistExtensionLocalizationConstant;
+import org.example.demo.GistExtensionResources;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.KeyUpEvent;

@@ -1,4 +1,4 @@
-package com.codenvy.ide.extension.demo;
+package org.example.demo;
 
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
@@ -15,6 +15,6 @@ public interface GistExtensionResources extends ClientBundle {
     @Source({"Gist.css", "com/codenvy/ide/api/ui/style.css"})
     GistCSS gistCSS();
 
-    @Source("com/codenvy/ide/extension/demo/images/github.png")
+    @Source("org/example/demo/images/github.png")
     ImageResource github();
 }

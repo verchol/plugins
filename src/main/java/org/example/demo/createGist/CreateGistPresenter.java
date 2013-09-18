@@ -1,7 +1,7 @@
-package com.codenvy.ide.extension.demo.createGist;
+package org.example.demo.createGist;
 
 import com.codenvy.ide.api.parts.ConsolePart;
-import com.codenvy.ide.extension.demo.GistExtensionLocalizationConstant;
+import org.example.demo.GistExtensionLocalizationConstant;
 import com.google.gwt.http.client.Request;
 import com.google.gwt.http.client.RequestBuilder;
 import com.google.gwt.http.client.RequestCallback;

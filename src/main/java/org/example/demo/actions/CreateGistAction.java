@@ -1,4 +1,4 @@
-package com.codenvy.ide.extension.demo.actions;
+package org.example.demo.actions;
 
 import com.codenvy.ide.api.ui.action.Action;
 import com.codenvy.ide.api.ui.action.ActionEvent;
@@ -7,10 +7,10 @@ import com.codenvy.ide.api.editor.EditorAgent;
 import com.codenvy.ide.api.editor.EditorPartPresenter;
 import com.codenvy.ide.api.preferences.PreferencesManager;
 import com.codenvy.ide.api.resources.ResourceProvider;
-import com.codenvy.ide.extension.demo.GistExtensionLocalizationConstant;
-import com.codenvy.ide.extension.demo.GistExtensionResources;
-import com.codenvy.ide.extension.demo.createGist.CreateGistPresenter;
-import com.codenvy.ide.extension.demo.GistExtensionLocalizationConstant;
+import org.example.demo.GistExtensionLocalizationConstant;
+import org.example.demo.GistExtensionResources;
+import org.example.demo.createGist.CreateGistPresenter;
+import org.example.demo.GistExtensionLocalizationConstant;
 import com.codenvy.ide.resources.model.File;
 import com.codenvy.ide.resources.model.Property;
 import com.codenvy.ide.resources.model.Project;
