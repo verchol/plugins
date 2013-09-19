@@ -1,5 +1,5 @@
-Codenvy Apache Logger Plug-in
-=============================
+Codenvy File Operations Plug-in
+===============================
 
-Codenvy SDK extension example to create an Apache log4j's logger configuration file.
+Codenvy SDK extension example to create a simple configuration file and open it in the code editor.
 
