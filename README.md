@@ -1,7 +1,7 @@
 Codenvy Plug-in Samples
 =======================
 
-This is a list of Codenvy SDK plug-in samples. See http://docs.codenvy.com/sdk
+This is a list of Codenvy SDK plug-in examples. See http://docs.codenvy.com/sdk for more information.
 
 - **Scaffolding structure**: https://github.com/codenvy/plugins/tree/scaffolding
 - **Basic file and editor operations**: https://github.com/codenvy/plugins/tree/fileops
