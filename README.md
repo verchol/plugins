@@ -1,5 +1,5 @@
-Codenvy Plugins
-===============
+Codenvy Plug-in Samples
+=======================
 
 This is a list of Codenvy SDK plug-in samples. See http://docs.codenvy.com
 
