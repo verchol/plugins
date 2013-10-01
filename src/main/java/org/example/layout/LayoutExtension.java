@@ -7,7 +7,7 @@ import com.codenvy.ide.api.parts.ConsolePart;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 
-import org.example.layout.parts.NavigationPart;
+import org.example.layout.parts.NavigationPartPresenter;
 
 /**
  * Extension used to demonstrate the Codenvy SDK features.
