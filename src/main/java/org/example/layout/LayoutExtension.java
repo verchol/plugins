@@ -4,7 +4,7 @@ import com.codenvy.ide.api.extension.Extension;
 import com.codenvy.ide.api.ui.workspace.WorkspaceAgent;
 import com.codenvy.ide.api.ui.workspace.PartStackType;
 import com.codenvy.ide.api.parts.ConsolePart;
-import com.codenvy.ide.part.console.ConsolePartPresenter;
+// import com.codenvy.ide.part.ConsolePartPresenter;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 
@@ -19,21 +19,20 @@ public class LayoutExtension {
     public LayoutExtension(
                          LayoutExtensionLocalizationConstant localizationConstants,
                          WorkspaceAgent workspace,
-                         ConsolePartPresenter consolePart, 
                          ConsolePart console) {
         
     	// Add the console to several parts of the workspace.
     	// Left pane
-    	WorkspaceAgent.openPart(cpp,PartStackType.NAVIGATION);
+    	workspace.openPart(console,PartStackType.NAVIGATION);
     	// Editor
-    	WorkspaceAgent.openPart(cpp,PartStackType.EDITING);
+    	workspace.openPart(console,PartStackType.EDITING);
     	// Right pane
-    	WorkspaceAgent.openPart(cpp,PartStackType.TOOLING);
+    	workspace.openPart(console,PartStackType.TOOLING);
     	// Bottom pane
-    	WorkspaceAgent.openPart(cpp,PartStackType.INFORMATION);
+    	workspace.openPart(console,PartStackType.INFORMATION);
     	
     	
-        // Show a simple message in the console
-        console.print(localizationConstants.extensionRunning());        
+       // Show a simple message in the console
+       console.print(localizationConstants.extensionRunning());        
     }
 }
