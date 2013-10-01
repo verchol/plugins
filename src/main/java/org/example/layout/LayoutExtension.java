@@ -16,25 +16,22 @@ import org.example.layout.parts.NavigationPart;
 @Extension(title = "Layout Extension", version = "1.0.0")
 public class LayoutExtension {
 
-    @Inject
-    public LayoutExtension(
-                         LayoutExtensionLocalizationConstant localizationConstants,
-                         WorkspaceAgent workspace,
-                         ConsolePart console,
-                         NavigationPart navigation) {
-        
-    	// Add the console to several parts of the workspace.
-    	// Left pane
-    	workspace.openPart(navigation,PartStackType.NAVIGATION);
-    	// Editor
-    	workspace.openPart(console,PartStackType.EDITING);
-    	// Right pane
-    	workspace.openPart(console,PartStackType.TOOLING);
-    	// Bottom pane
-    	workspace.openPart(console,PartStackType.INFORMATION);
-    	
-    	
-       // Show a simple message in the console
-       console.print(localizationConstants.extensionRunning());        
-    }
+	@Inject
+	public LayoutExtension(
+			LayoutExtensionLocalizationConstant localizationConstants,
+			WorkspaceAgent workspace, ConsolePart console,
+			NavigationPart navigation) {
+
+		// Add a left navigation pane
+		workspace.openPart(navigation, PartStackType.NAVIGATION);
+		// Add an editing pane
+		workspace.openPart(console, PartStackType.EDITING);
+		// Add a right pane
+		workspace.openPart(console, PartStackType.TOOLING);
+		// Add a bottom pane
+		workspace.openPart(console, PartStackType.INFORMATION);
+
+		// Show a simple message in the console
+		console.print(localizationConstants.extensionRunning());
+	}
 }
