@@ -11,7 +11,7 @@ import com.codenvy.ide.api.parts.base.BaseActionDelegate;
 public interface NavigationPartView extends View<NavigationPartView.ActionDelegate> {
     public interface ActionDelegate extends BaseActionDelegate {
     }
-
+    
     /**
      * Print message in Navigation area.
      *
