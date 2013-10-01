@@ -7,7 +7,7 @@ import com.codenvy.ide.api.parts.ConsolePart;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 
-import org.example.layout.parts.NavigationPart;
+import org.example.layout.parts.NavigationPartPresenter;
 
 /**
  * Extension used to demonstrate the Codenvy SDK features.
@@ -20,7 +20,7 @@ public class LayoutExtension {
 	public LayoutExtension(
 			LayoutExtensionLocalizationConstant localizationConstants,
 			WorkspaceAgent workspace, ConsolePart console,
-			NavigationPart navigation) {
+			NavigationPartPresenter navigation) {
 
 		// Add a left navigation pane
 		workspace.openPart(navigation, PartStackType.NAVIGATION);
