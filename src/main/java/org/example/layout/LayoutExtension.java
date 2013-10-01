@@ -4,9 +4,10 @@ import com.codenvy.ide.api.extension.Extension;
 import com.codenvy.ide.api.ui.workspace.WorkspaceAgent;
 import com.codenvy.ide.api.ui.workspace.PartStackType;
 import com.codenvy.ide.api.parts.ConsolePart;
-// import com.codenvy.ide.part.ConsolePartPresenter;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
+
+import org.example.layout.parts.NavigationPart;
 
 /**
  * Extension used to demonstrate the Codenvy SDK features.
@@ -19,11 +20,12 @@ public class LayoutExtension {
     public LayoutExtension(
                          LayoutExtensionLocalizationConstant localizationConstants,
                          WorkspaceAgent workspace,
-                         ConsolePart console) {
+                         ConsolePart console,
+                         NavigationPart navigation) {
         
     	// Add the console to several parts of the workspace.
     	// Left pane
-    	workspace.openPart(console,PartStackType.NAVIGATION);
+    	workspace.openPart(navigation,PartStackType.NAVIGATION);
     	// Editor
     	workspace.openPart(console,PartStackType.EDITING);
     	// Right pane
