@@ -9,4 +9,7 @@ public interface LayoutExtensionLocalizationConstant extends Messages {
     /* Messages */
     @Key("messages.extensionRunning")
     String extensionRunning();
+    
+    @Key("messages.extensionFinishedLoading")
+    String extensionFinishedLoading();    
 }
