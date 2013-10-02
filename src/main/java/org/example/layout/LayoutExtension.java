@@ -34,7 +34,7 @@ public class LayoutExtension {
 	   this.workspace = workspace;
 	   this.console = console;
 
-       actionManager.registerAction(localizationConstants.createGistActionlId(), triggerNotificationAction);
+       actionManager.registerAction(localizationConstants.triggerNotificationText(), triggerNotificationAction);
        DefaultActionGroup saveActionGroup = (DefaultActionGroup) actionManager.getAction(IdeActions.GROUP_MAIN_TOOLBAR);
        saveActionGroup.add(triggerNotificationAction);	   
 	   
