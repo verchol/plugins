@@ -53,6 +53,6 @@ public class TriggerNotificationAction extends Action {
 	private void displayNotification() {
         Notification notification = new Notification(localizationConstants.triggerNotificationMessage(), Notification.Type.INFO);
         notificationManager.showNotification(notification);
-        console.print(localizationConstants.triggerNotificationConsoleMessage() + i);
+        console.print(String.format(localizationConstants.triggerNotificationConsoleMessage(), i));
 	}
 }
