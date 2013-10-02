@@ -10,6 +10,7 @@ import com.codenvy.ide.api.notification.Notification;
 import com.codenvy.ide.api.notification.NotificationManager;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
+import java.lang.String;
 
 /**
  * Action for creating Gist on GitHub.
