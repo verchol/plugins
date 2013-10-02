@@ -51,8 +51,8 @@ public class TriggerNotificationAction extends Action {
     }
         
 	private void displayNotification() {
-        Notification notification = new Notification(localizationConstants.extensionFinishedLoading(), Notification.Type.INFO);
+        Notification notification = new Notification(localizationConstants.triggerNotificationMessage(), Notification.Type.INFO);
         notificationManager.showNotification(notification);
         console.print("A new notification has been displayed" + i);
-	}    
+	}
 }

@@ -14,12 +14,15 @@ public interface LayoutExtensionLocalizationConstant extends Messages {
     String triggerNotificationId();    
         
     @Key("notification.triggerNotificationText")
-    String triggerNotificationText();    
+    String triggerNotificationText();
     
     @Key("notification.triggerNotificationDescription")
     String triggerNotificationDescription();
     
     @Key("notification.triggerNotificationMessage")
-    String triggerNotificationMessage();    
+    String triggerNotificationMessage();
+
+    @Key("notification.triggerNotificationConsoleMessage")
+    String triggerNotificationConsoleMessage();
     
 }
