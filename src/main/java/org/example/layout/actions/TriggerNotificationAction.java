@@ -19,22 +19,28 @@ public class TriggerNotificationAction extends Action {
 
 	private LayoutExtensionLocalizationConstant localizationConstants;
 	private NotificationManager notificationManager;
+	private ConsolePart console;
+	private int i;
 
     @Inject
     public TriggerNotificationAction(LayoutExtensionLocalizationConstant localizationConstants, 
-    		NotificationManager notificationManager, LayoutExtensionResources resources ) {
+    		NotificationManager notificationManager, LayoutExtensionResources resources, 
+    		ConsolePart console) {
     	
     	super(localizationConstants.triggerNotificationText(), 
     			localizationConstants.triggerNotificationDescription(), 
     			resources.message());
     	
+    	i = 0;
     	this.localizationConstants = localizationConstants;
     	this.notificationManager = notificationManager;
+    	this.console = console;
     }
 
     /** {@inheritDoc} */
     @Override
     public void actionPerformed(ActionEvent e) {
+    	i++;
         displayNotification();
     }
 
@@ -47,5 +53,6 @@ public class TriggerNotificationAction extends Action {
 	private void displayNotification() {
         Notification notification = new Notification(localizationConstants.extensionFinishedLoading(), Notification.Type.INFO);
         notificationManager.showNotification(notification);
+        console.print("A new notification has been displayed" + i);
 	}    
 }

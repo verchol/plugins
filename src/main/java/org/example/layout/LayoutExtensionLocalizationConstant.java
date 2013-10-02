@@ -10,15 +10,16 @@ public interface LayoutExtensionLocalizationConstant extends Messages {
     @Key("messages.extensionRunning")
     String extensionRunning();
     
-    @Key("messages.extensionFinishedLoading")
-    String extensionFinishedLoading();
-
-    @Key("messages.triggerNotificationId")
+    @Key("notification.triggerNotificationId")
     String triggerNotificationId();    
         
-    @Key("messages.triggerNotificationText")
+    @Key("notification.triggerNotificationText")
     String triggerNotificationText();    
     
-    @Key("messages.triggerNotificationDescription")
-    String triggerNotificationDescription();    
+    @Key("notification.triggerNotificationDescription")
+    String triggerNotificationDescription();
+    
+    @Key("notification.triggerNotificationMessage")
+    String triggerNotificationMessage();    
+    
 }

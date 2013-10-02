@@ -12,8 +12,8 @@ public interface LayoutExtensionResources extends ClientBundle {
         String textFont();
     }
 
-    @Source({"styles.css", "com/codenvy/ide/api/ui/styles.css"})
-    LayoutCSS styles();
+//    @Source({"styles.css", "com/codenvy/ide/api/ui/styles.css"})
+//    LayoutCSS styles();
 
     @Source("org/example/layout/images/codenvy.png")
     ImageResource icon();
