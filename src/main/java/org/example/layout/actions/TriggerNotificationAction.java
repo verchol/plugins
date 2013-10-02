@@ -10,8 +10,6 @@ import com.codenvy.ide.api.notification.Notification;
 import com.codenvy.ide.api.notification.NotificationManager;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import java.lang.String;
-
 /**
  * Action for creating Gist on GitHub.
  */
@@ -54,6 +52,6 @@ public class TriggerNotificationAction extends Action {
 	private void displayNotification() {
         Notification notification = new Notification(localizationConstants.triggerNotificationMessage(), Notification.Type.INFO);
         notificationManager.showNotification(notification);
-        console.print(String.format(localizationConstants.triggerNotificationConsoleMessage(), i));
+        console.print(localizationConstants.triggerNotificationConsoleMessage() + i);
 	}
 }
