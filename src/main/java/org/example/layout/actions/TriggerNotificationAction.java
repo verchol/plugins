@@ -15,13 +15,13 @@ import com.google.inject.Singleton;
  * Action for creating Gist on GitHub.
  */
 @Singleton
-public class triggerNotificationAction extends Action {
+public class TriggerNotificationAction extends Action {
 
 	private LayoutExtensionLocalizationConstant localizationConstants;
 	private NotificationManager notificationManager;
 
     @Inject
-    public triggerNotificationAction(LayoutExtensionLocalizationConstant localizationConstants, 
+    public TriggerNotificationAction(LayoutExtensionLocalizationConstant localizationConstants, 
     		NotificationManager notificationManager, LayoutExtensionResources resources ) {
     	
     	super(localizationConstants.triggerNotificationText(), 

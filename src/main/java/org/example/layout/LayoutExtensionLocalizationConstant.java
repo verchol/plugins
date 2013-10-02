@@ -17,5 +17,5 @@ public interface LayoutExtensionLocalizationConstant extends Messages {
     String triggerNotificationText();    
     
     @Key("messages.triggerNotificationDescription")
-    String triggerNotificationText();    
+    String triggerNotificationDescription();    
 }
