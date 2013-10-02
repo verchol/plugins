@@ -34,14 +34,19 @@ public class LayoutExtension {
 	   this.workspace = workspace;
 	   this.console = console;
 
-       actionManager.registerAction(localizationConstants.triggerNotificationText(), triggerNotificationAction);
-       DefaultActionGroup saveActionGroup = (DefaultActionGroup) actionManager.getAction(IdeActions.GROUP_MAIN_TOOLBAR);
-       saveActionGroup.add(triggerNotificationAction);	   
-	   
 	   // Add panels around the entire workspace. 
-	   addWorkspacePanels();
+	   addWorkspacePanels();	   
 	   
-	   // Add action for triggering a notification
+	   // Register action for triggering an SDK notification
+       actionManager.registerAction(localizationConstants.triggerNotificationText(), triggerNotificationAction);
+
+       // Add action to the toolbar
+       DefaultActionGroup toolbarActionGroup = (DefaultActionGroup) actionManager.getAction(IdeActions.GROUP_MAIN_TOOLBAR);
+       toolbarActionGroup.add(triggerNotificationAction);	   
+	   
+	   // Add action to the default context menu       
+       DefaultActionGroup contextActionGroup = (DefaultActionGroup) actionManager.getAction(IdeActions.GROUP_MAIN_CONTEXT_MENU);
+       contextActionGroup.add(triggerNotificationAction);	   
 	   
 	   // Show a simple message in the console
 	   console.print(localizationConstants.extensionRunning());
