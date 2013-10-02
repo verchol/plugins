@@ -36,7 +36,7 @@ public class LayoutExtension {
 
        actionManager.registerAction(localizationConstants.createGistActionlId(), triggerNotificationAction);
        DefaultActionGroup saveActionGroup = (DefaultActionGroup) actionManager.getAction(IdeActions.GROUP_MAIN_TOOLBAR);
-       saveActionGroup.add(createGistAction);	   
+       saveActionGroup.add(triggerNotificationAction);	   
 	   
 	   // Add panels around the entire workspace. 
 	   addWorkspacePanels();
