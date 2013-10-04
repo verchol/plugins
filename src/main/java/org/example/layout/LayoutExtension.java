@@ -8,6 +8,7 @@ import com.codenvy.ide.api.ui.action.IdeActions;
 import com.codenvy.ide.api.ui.action.ActionManager;
 import com.codenvy.ide.api.ui.action.DefaultActionGroup;
 import org.example.layout.actions.TriggerNotificationAction;
+import org.example.layout.parts.NavigationPart;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.google.gwt.user.client.Timer;
@@ -24,15 +25,18 @@ public class LayoutExtension {
    private LayoutExtensionLocalizationConstant localizationConstants;
    private WorkspaceAgent workspace;
    private ConsolePart console;
+   private NavigationPart nav;
    
 	@Inject
 	public LayoutExtension(LayoutExtensionLocalizationConstant localizationConstants,
 			WorkspaceAgent workspace, ConsolePart console, 
+      NavigationPart nav,
 			ActionManager actionManager, TriggerNotificationAction triggerNotificationAction) {
 
 	   this.localizationConstants = localizationConstants;
 	   this.workspace = workspace;
 	   this.console = console;
+     this.nav = nav;
 
 	   // Add panels around the entire workspace. 
 	   addWorkspacePanels();	   
@@ -54,13 +58,13 @@ public class LayoutExtension {
 	
 	private void addWorkspacePanels() {
 		// Add a left navigation pane
-		workspace.openPart(console, PartStackType.NAVIGATION);
+		workspace.openPart(nav, PartStackType.NAVIGATION);
 		// Add an editing pane
-		workspace.openPart(console, PartStackType.EDITING);
+		workspace.openPart(nav, PartStackType.EDITING);
 		// Add a right pane
-		workspace.openPart(console, PartStackType.TOOLING);
+		workspace.openPart(nav, PartStackType.TOOLING);
 		// Add a bottom pane
-		workspace.openPart(console, PartStackType.INFORMATION);
+		workspace.openPart(nav, PartStackType.INFORMATION);
 	}
 
 }
