@@ -1,4 +1,4 @@
-package org.example.client.inject;
+package org.example.layout.client.inject;
 
 import com.codenvy.ide.api.extension.ExtensionGinModule;
 import com.google.gwt.inject.client.AbstractGinModule;
