@@ -1,4 +1,4 @@
-package org.example.client.inject;
+package org.example.layout.client.inject;
 
 import com.codenvy.ide.api.extension.ExtensionGinModule;
 import com.google.gwt.inject.client.AbstractGinModule;
@@ -14,7 +14,8 @@ public class LayoutGinModule extends AbstractGinModule {
     /** {@inheritDoc} */
     @Override
     protected void configure() {
-    	bind(NavigationPart.class).to(NavigationPartPresenter.class).in(Singleton.class);        
     	bind(NavigationPartView.class).to(NavigationPartViewImpl.class).in(Singleton.class);
+    	bind(NavigationPart.class).to(NavigationPartPresenter.class).in(Singleton.class);        
+
     }
 }
